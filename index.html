@@ -525,6 +525,7 @@
 			customInput=false
 			updateCustom()
 			currentLevel=0
+			newGame()
 			for(let i=1;i<=6;i++) {
 				for(let j=1;j<=6;j++) currentMap[10*i+j]=customMap[10*i+j]
 			}
@@ -633,7 +634,7 @@
 					highscore["L"+currentLevel+"DA"]=action
 					localStorage.setItem("highscore", JSON.stringify(highscore))
 				}
-				if(currentLevel>0 && highscore["L"+currentLevel+"T"]>turn || highscore["L"+currentLevel+"T"]===0) {
+				if(currentLevel>0 && (highscore["L"+currentLevel+"T"]>turn || highscore["L"+currentLevel+"T"]===0)) {
 					highscore["L"+currentLevel+"T"]=turn
 					highscore["L"+currentLevel+"TA"]=action
 					localStorage.setItem("highscore", JSON.stringify(highscore))
@@ -953,7 +954,7 @@
 		<br>
 		<span>QQ: 807581283</span>
 		<br>
-		<span>Last update: 2025/7/10</span>
+		<span>Last update: 2025/7/11, fixed custom map bugs</span>
 		<br>
 	</div>
 	<div class="cmargin text3-c">
